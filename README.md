@@ -4,6 +4,7 @@ C++ Exercises for learning purpose.
 There are two modules:
 * Module 1
 * Module 2
+
 ---
 
 **Module 1**
@@ -15,6 +16,15 @@ There are two modules:
   5. ASCII
   6. Linear Search
   7. Selection Sort
+
+
+* Lecture 3 - Functions
+  1. Factorial
+  2. To Upper and Lower Case
+  3. 3D Distance
+  4. Arc Tangent 2
+  5. Calculator
+  6. Slot Machine
 
 **Module 2**
 
