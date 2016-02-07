@@ -26,6 +26,7 @@ There are two modules:
   5. Calculator
   6. Slot Machine
   7. Binary Search
+  8. Bubble Sort
 
 **Module 2**
 

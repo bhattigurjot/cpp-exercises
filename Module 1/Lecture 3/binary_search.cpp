@@ -43,6 +43,9 @@ int main()
 
 int BinSearch(int data[], int numElements, int searchkey)
 {
+  /*
+  Binary Search Function
+  */
   int middle = 0;
   int pos = -1;
   int lowerV = 0;
