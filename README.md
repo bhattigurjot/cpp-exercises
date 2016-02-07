@@ -25,6 +25,7 @@ There are two modules:
   4. Arc Tangent 2
   5. Calculator
   6. Slot Machine
+  7. Binary Search
 
 **Module 2**
 
