@@ -34,6 +34,13 @@ There are two modules:
     * Dynamic Memory of arrays with pointers
     * Dynamic Memory with Vector
     * Function Pointer
+  2. Dice Function
+    * Dice Function
+    * Guess Game
+  3. Array Fill
+    * Array Fill
+    * Array Fill with Vector
+  4. Quadratic Equation
 
 
 **Module 2**
