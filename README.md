@@ -28,6 +28,14 @@ There are two modules:
   7. Binary Search
   8. Bubble Sort
 
+
+* Lecture 4 - References and Pointers
+  1. Extra
+    * Dynamic Memory of arrays with pointers
+    * Dynamic Memory with Vector
+    * Function Pointer
+
+
 **Module 2**
 
 *Not Done Yet*
