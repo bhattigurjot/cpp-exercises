@@ -212,8 +212,16 @@ void Player::levelUp()
 		mNextLevelExp = mLevel * mLevel * 1000;
 
 		mAccuracy += Random(1, 3);
-		mMaxHitPoints += Random(2, 6);
 		mArmor += Random(1, 2);
+
+		if (mClassName == "Fighter")
+		mMaxHitPoints += Random(3, 6);
+		else if (mClassName == "Wizard")
+		mMaxHitPoints += Random(1, 3);
+		else if (mClassName == "Cleric")
+		mMaxHitPoints += Random(2, 5);
+		else if (mClassName == "Thief")
+		mMaxHitPoints += Random(1, 4);
 
 		mLevel = mMaxHitPoints;
 	}
