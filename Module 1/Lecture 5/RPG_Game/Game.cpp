@@ -27,8 +27,51 @@ int main()
 		Monster* monster = 0;
 		switch (selection)
 		{
-		case 1:
+			case 1:
 			gameMap.movePlayer();
+			monster = gameMap.checkRandomEncounter();
+
+			if (monster != 0)
+			{
+				while (true)
+				{
+					cout << "------------------------" << endl;
+					mainPlayer.displayHitPoints();
+					mainPlayer.displayMagicPoints();
+					cout << endl;
+					cout << "------------------------" << endl;
+					monster->displayHitPoints();
+					cout << endl;
+					cout << "------------------------" << endl;
+
+					bool runAway = mainPlayer.attack(*monster);
+
+					if (runAway)
+					break;
+
+					if (monster->isDead())
+					{
+						mainPlayer.victory(monster->getXPReward(), monster->getGoldReward());
+						mainPlayer.levelUp();
+						break;
+					}
+
+					monster->attackPlayer(mainPlayer);
+
+					if (mainPlayer.isDead())
+					{
+						mainPlayer.gameOver();
+						done = true;
+						break;
+					}
+				}
+
+				delete monster;
+				monster = 0;
+			}
+			break;
+			case 2:
+			mainPlayer.rest();
 			monster = gameMap.checkRandomEncounter();
 
 			if (monster != 0)
@@ -68,15 +111,12 @@ int main()
 
 				delete monster;
 				monster = 0;
-			}
+			}	
 			break;
-		case 2:
-			mainPlayer.rest();	
-			break;
-		case 3:
+			case 3:
 			mainPlayer.viewStats();
 			break;
-		case 4:
+			case 4:
 			done = true;
 			break;
 		}

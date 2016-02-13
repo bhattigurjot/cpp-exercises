@@ -329,6 +329,7 @@ void Player::rest()
 	std::cout << "Resting..." << std::endl;
 
 	mHitPoints = mMaxHitPoints;
+	mMagicPoints = mMaxMagicPoints;
 }
 
 void Player::viewStats()

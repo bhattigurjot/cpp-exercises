@@ -52,6 +52,7 @@ There are two modules:
     * Character Races
     * Leveling Up
     * Magic Points
+    * Random Encounters during Rest
 
 
 **Module 2**

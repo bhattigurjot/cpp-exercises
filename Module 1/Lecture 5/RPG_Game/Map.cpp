@@ -26,16 +26,16 @@ void Map::movePlayer()
 
 	switch (selection)
 	{
-	case 1:
+		case 1:
 		mPlayerYPos++;
 		break;
-	case 2:
+		case 2:
 		mPlayerXPos++;
 		break;
-	case 3:
+		case 3:
 		mPlayerYPos--;
 		break;
-	default:
+		default:
 		mPlayerXPos--;
 		break;
 	}
@@ -87,5 +87,5 @@ Monster* Map::checkRandomEncounter()
 void Map::printPlayerPos()
 {
 	std::cout << "Player Position = (" << mPlayerXPos << ", "
-		<< mPlayerYPos << ")" << std::endl;
+	<< mPlayerYPos << ")" << std::endl;
 }
