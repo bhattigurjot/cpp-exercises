@@ -3,6 +3,7 @@
 #define PLAYER_H
 
 #include"Weapon.h"
+#include"Spell.h"
 #include"Monster.h"
 #include<string>
 
@@ -26,6 +27,7 @@ public:
 	void victory(int xp, int gold);
 	void gameOver();
 	void displayHitPoints();
+	void displayMagicPoints();
 
 private:
 	std::string mName;
@@ -34,12 +36,15 @@ private:
 	int mAccuracy;
 	int mHitPoints;
 	int mMaxHitPoints;
+	int mMagicPoints;
+	int mMaxMagicPoints;
 	int mExpPoints;
 	int mGoldPoints;
 	int mNextLevelExp;
 	int mLevel;
 	int mArmor;
 	Weapon mWeapon;
+	Spell mSpell;
 };
 
 #endif // PLAYER_H

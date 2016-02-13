@@ -48,7 +48,11 @@ There are two modules:
   * Text Based RPG Game
     * Game, Map, Monster, Player, Weapon, Random and Range
   * Exercises - Improvements
-    * Gold Modification
+    * Gold
+    * Character Races
+    * Leveling Up
+    * Magic Points
+
 
 **Module 2**
 

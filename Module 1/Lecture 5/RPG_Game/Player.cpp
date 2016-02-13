@@ -9,6 +9,8 @@ Player::Player()
 	mAccuracy = 0;
 	mHitPoints = 0;
 	mMaxHitPoints = 0;
+	mMagicPoints = 0;
+	mMaxMagicPoints = 0;
 	mExpPoints = 0;
 	mGoldPoints = 0;
 	mNextLevelExp = 0;
@@ -62,6 +64,8 @@ void Player::createClass()
 		mAccuracy = 10;
 		mHitPoints = 20;
 		mMaxHitPoints = 20;
+		mMagicPoints = 10;
+		mMaxMagicPoints = 10;
 		mExpPoints = 0;
 		mGoldPoints = 0;
 		mNextLevelExp = 1000;
@@ -76,6 +80,8 @@ void Player::createClass()
 		mAccuracy = 5;
 		mHitPoints = 10;
 		mMaxHitPoints = 10;
+		mMagicPoints = 20;
+		mMaxMagicPoints = 20;
 		mExpPoints = 0;
 		mGoldPoints = 0;
 		mNextLevelExp = 1000;
@@ -90,6 +96,8 @@ void Player::createClass()
 		mAccuracy = 8;
 		mHitPoints = 15;
 		mMaxHitPoints = 15;
+		mMagicPoints = 13;
+		mMaxMagicPoints = 13;
 		mExpPoints = 0;
 		mGoldPoints = 0;
 		mNextLevelExp = 1000;
@@ -104,6 +112,8 @@ void Player::createClass()
 		mAccuracy = 7;
 		mHitPoints = 12;
 		mMaxHitPoints = 12;
+		mMagicPoints = 11;
+		mMaxMagicPoints = 11;
 		mExpPoints = 0;
 		mGoldPoints = 0;
 		mNextLevelExp = 1000;
@@ -150,7 +160,10 @@ void Player::createClass()
 bool Player::attack(Monster& monster)
 {
 	int selection = 1;
-	std::cout << "1) Attack 2) Run: ";
+	int spellNum = 1;
+	bool castSpell = true;
+
+	std::cout << "1) Attack 2) Cast Spell 3) Run: ";
 	std::cin >> selection;
 	std::cout << std::endl;
 
@@ -158,7 +171,7 @@ bool Player::attack(Monster& monster)
 	{
 		case 1:
 		std::cout << "You attack the " << monster.getName()
-		<< "with a " << mWeapon.mName << std::endl;
+		<< " with a " << mWeapon.mName << std::endl;
 
 		if (Random(0, 20) < mAccuracy)
 		{
@@ -186,6 +199,78 @@ bool Player::attack(Monster& monster)
 		std::cout << std::endl;
 		break;
 		case 2:
+		std::cout << "1) Magic missile 2) Fireball 3) Shield 4) Do Nothing: ";
+		std::cin >> spellNum;
+		std::cout << std::endl;
+
+		switch (spellNum)
+		{
+			case 1:
+			mSpell.mName = "Magic missile";
+			mSpell.mDamageRange.mLow = 1;
+			mSpell.mDamageRange.mHigh = 8;
+			mSpell.mMagicPointsRequired = 10;
+			break;
+			case 2:
+			mSpell.mName = "Fireball";
+			mSpell.mDamageRange.mLow = 1;
+			mSpell.mDamageRange.mHigh = 6;
+			mSpell.mMagicPointsRequired = 6;
+			break;
+			case 3:
+			mSpell.mName = "Shield";
+			mSpell.mDamageRange.mLow = 1;
+			mSpell.mDamageRange.mHigh = 4;
+			mSpell.mMagicPointsRequired = 5;
+			break;
+			default:
+			castSpell = false;
+			break;
+		}
+
+		if (castSpell)
+		{
+			mMagicPoints -= mSpell.mMagicPointsRequired;
+
+			std::cout << "You casted a " << mSpell.mName << " spell on "
+			<< monster.getName() << std::endl;
+
+			if (mMagicPoints < mSpell.mMagicPointsRequired)
+			{
+				std::cout << "Not enough Magic points to cast a spell."
+				<< std::endl;
+			}
+			else
+			{
+
+				if (Random(0, 20) < mAccuracy)
+				{
+					int damage = Random(mSpell.mDamageRange);
+
+					int totalDamage = damage - monster.getArmor();
+
+					if (totalDamage <= 0)
+					{
+						std::cout << "Your spell failed to affect"
+						<< " the armor." << std::endl;
+					}
+					else
+					{
+						std::cout << "You casted spell for " << totalDamage
+						<< " damage!" << std::endl;
+						monster.takeDamage(totalDamage);
+					}
+				}
+				else
+				{
+					std::cout << "You missed!" << std::endl;
+				}
+			}
+		}
+
+		std::cout << std::endl;
+		break;
+		case 3:
 		int roll = Random(1, 4);
 
 		if (roll == 1)
@@ -215,13 +300,25 @@ void Player::levelUp()
 		mArmor += Random(1, 2);
 
 		if (mClassName == "Fighter")
-		mMaxHitPoints += Random(3, 6);
+		{
+			mMaxHitPoints += Random(3, 6);
+			mMaxMagicPoints += Random(1, 3);
+		}
 		else if (mClassName == "Wizard")
-		mMaxHitPoints += Random(1, 3);
+		{
+			mMaxHitPoints += Random(1, 3);
+			mMaxMagicPoints += Random(3, 6);
+		}
 		else if (mClassName == "Cleric")
-		mMaxHitPoints += Random(2, 5);
+		{
+			mMaxHitPoints += Random(2, 5);
+			mMaxMagicPoints += Random(2, 4);
+		}
 		else if (mClassName == "Thief")
-		mMaxHitPoints += Random(1, 4);
+		{
+			mMaxHitPoints += Random(1, 4);
+			mMaxMagicPoints += Random(1, 4);
+		}
 
 		mLevel = mMaxHitPoints;
 	}
@@ -245,6 +342,8 @@ void Player::viewStats()
 	std::cout << "Accuracy          = " << mAccuracy << std::endl;
 	std::cout << "HitPoints         = " << mHitPoints << std::endl;
 	std::cout << "MaxHitPoints      = " << mMaxHitPoints << std::endl;
+	std::cout << "MagicPoints       = " << mMagicPoints << std::endl;
+	std::cout << "MaxMagicPoints    = " << mMaxMagicPoints << std::endl;
 	std::cout << "XP                = " << mExpPoints << std::endl;
 	std::cout << "Gold              = " << mGoldPoints << std::endl;
 	std::cout << "XP for Next Lvl   = " << mNextLevelExp << std::endl;
@@ -283,4 +382,9 @@ void Player::gameOver()
 void Player::displayHitPoints()
 {
 	std::cout << mName << "'s Hitpoints = " << mHitPoints << std::endl;
+}
+
+void Player::displayMagicPoints()
+{
+	std::cout << mName << "'s Magicpoints = " << mMagicPoints << std::endl;
 }
