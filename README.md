@@ -47,7 +47,8 @@ There are two modules:
 * Lecture 5 - Object Oriented Programming
   * Text Based RPG Game
     * Game, Map, Monster, Player, Weapon, Random and Range
-
+  * Exercises - Improvements
+    * Gold Modification
 
 **Module 2**
 

@@ -23,7 +23,7 @@ public:
 	void levelUp();
 	void rest();
 	void viewStats();
-	void victory(int xp);
+	void victory(int xp, int gold);
 	void gameOver();
 	void displayHitPoints();
 
@@ -34,6 +34,7 @@ private:
 	int mHitPoints;
 	int mMaxHitPoints;
 	int mExpPoints;
+	int mGoldPoints;
 	int mNextLevelExp;
 	int mLevel;
 	int mArmor;

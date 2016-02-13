@@ -4,13 +4,14 @@
 #include<iostream>
 
 Monster::Monster(const std::string& name, int hp, int acc,
-	int xpReward, int armor, const std::string& weaponName,
+	int xpReward, int goldReward, int armor, const std::string& weaponName,
 	int lowDamage, int highDamage)
 	{
 		mName = name;
 		mHitPoints = hp;
 		mAccuracy = acc;
 		mExpReward = xpReward;
+		mGoldReward = goldReward;
 		mArmor = armor;
 		mWeapon.mName = weaponName;
 		mWeapon.mDamageRange.mLow = lowDamage;
@@ -25,6 +26,11 @@ Monster::Monster(const std::string& name, int hp, int acc,
 	int Monster::getXPReward()
 	{
 		return mExpReward;
+	}
+
+	int Monster::getGoldReward()
+	{
+		return mGoldReward;
 	}
 
 	std::string Monster::getName()

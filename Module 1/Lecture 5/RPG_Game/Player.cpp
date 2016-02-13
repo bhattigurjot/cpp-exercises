@@ -10,6 +10,7 @@ Player::Player()
 	mHitPoints = 0;
 	mMaxHitPoints = 0;
 	mExpPoints = 0;
+	mGoldPoints = 0;
 	mNextLevelExp = 0;
 	mLevel = 0;
 	mArmor = 0;
@@ -52,6 +53,7 @@ void Player::createClass()
 
 	int characterNum = 1;
 	std::cin >> characterNum;
+	std::cout << std::endl;
 
 	switch (characterNum)
 	{
@@ -61,6 +63,7 @@ void Player::createClass()
 		mHitPoints = 20;
 		mMaxHitPoints = 20;
 		mExpPoints = 0;
+		mGoldPoints = 0;
 		mNextLevelExp = 1000;
 		mLevel = 1;
 		mArmor = 4;
@@ -74,6 +77,7 @@ void Player::createClass()
 		mHitPoints = 10;
 		mMaxHitPoints = 10;
 		mExpPoints = 0;
+		mGoldPoints = 0;
 		mNextLevelExp = 1000;
 		mLevel = 1;
 		mArmor = 1;
@@ -87,6 +91,7 @@ void Player::createClass()
 		mHitPoints = 15;
 		mMaxHitPoints = 15;
 		mExpPoints = 0;
+		mGoldPoints = 0;
 		mNextLevelExp = 1000;
 		mLevel = 1;
 		mArmor = 3;
@@ -100,6 +105,7 @@ void Player::createClass()
 		mHitPoints = 12;
 		mMaxHitPoints = 12;
 		mExpPoints = 0;
+		mGoldPoints = 0;
 		mNextLevelExp = 1000;
 		mLevel = 1;
 		mArmor = 2;
@@ -201,9 +207,10 @@ void Player::viewStats()
 	std::cout << "HitPoints         = " << mHitPoints << std::endl;
 	std::cout << "MaxHitPoints      = " << mMaxHitPoints << std::endl;
 	std::cout << "XP                = " << mExpPoints << std::endl;
+	std::cout << "Gold              = " << mGoldPoints << std::endl;
 	std::cout << "XP for Next Lvl   = " << mNextLevelExp << std::endl;
-	std::cout << "Level			    = " << mLevel << std::endl;
-	std::cout << "Armor			    = " << mArmor << std::endl;
+	std::cout << "Level             = " << mLevel << std::endl;
+	std::cout << "Armor             = " << mArmor << std::endl;
 	std::cout << "Weapon Name       = " << mWeapon.mName << std::endl;
 	std::cout << "Weapon Damage     = " << mWeapon.mDamageRange.mLow << " - "
 	<< mWeapon.mDamageRange.mHigh << std::endl;
@@ -214,11 +221,12 @@ void Player::viewStats()
 	std::cout << "================" << std::endl << std::endl;
 }
 
-void Player::victory(int xp)
+void Player::victory(int xp, int gold)
 {
 	std::cout << "You won the battle!" << std::endl;
-	std::cout << "You win " << xp << " points!" << std::endl;
+	std::cout << "You win " << xp << " xp and " << gold << " gold points!" << std::endl;
 	mExpPoints += xp;
+	mGoldPoints += gold;
 }
 
 void Player::gameOver()

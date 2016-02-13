@@ -17,6 +17,7 @@ int main()
 	bool done = false;
 	while (!done)
 	{
+		cout << endl;
 		gameMap.printPlayerPos();
 
 		int selection = 1;
@@ -45,7 +46,7 @@ int main()
 
 					if (monster->isDead())
 					{
-						mainPlayer.victory(monster->getXPReward());
+						mainPlayer.victory(monster->getXPReward(), monster->getGoldReward());
 						mainPlayer.levelUp();
 						break;
 					}
