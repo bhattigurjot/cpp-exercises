@@ -114,6 +114,37 @@ void Player::createClass()
 		mWeapon.mDamageRange.mHigh = 6;
 		break;
 	}
+
+	std::cout << "Please select character's race name..." << std::endl;
+	std::cout << "1) Dwarf 2) Human 3) Elf 4) Halfling: ";
+
+	int raceNum = 1;
+	std::cin >> raceNum;
+	std::cout << std::endl;
+
+	switch (raceNum)
+	{
+		case 1:
+		mRaceName = "Dwarf";
+		mAccuracy = mAccuracy - 4;
+		mHitPoints = mHitPoints - 2;
+		break;
+		case 2:
+		mRaceName = "Human";
+		mAccuracy = mAccuracy;
+		mHitPoints = mHitPoints;
+		break;
+		case 3:
+		mRaceName = "Elf";
+		mAccuracy = mAccuracy + 2;
+		mHitPoints = mHitPoints + 2;
+		break;
+		default:
+		mRaceName = "Halfling";
+		mAccuracy = mAccuracy - 1;
+		mHitPoints = mHitPoints + 1;
+		break;
+	}
 }
 
 bool Player::attack(Monster& monster)

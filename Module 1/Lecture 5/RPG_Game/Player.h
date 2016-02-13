@@ -30,6 +30,7 @@ public:
 private:
 	std::string mName;
 	std::string mClassName;
+	std::string mRaceName;
 	int mAccuracy;
 	int mHitPoints;
 	int mMaxHitPoints;
