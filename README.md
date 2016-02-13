@@ -30,17 +30,23 @@ There are two modules:
 
 
 * Lecture 4 - References and Pointers
-  1. Extra
+  * Extra
     * Dynamic Memory of arrays with pointers
     * Dynamic Memory with Vector
     * Function Pointer
-  2. Dice Function
-    * Dice Function
-    * Guess Game
-  3. Array Fill
-    * Array Fill
-    * Array Fill with Vector
-  4. Quadratic Equation
+  * Exercises:
+    1. Dice Function
+      * Dice Function
+      * Guess Game
+    2. Array Fill
+      * Array Fill
+      * Array Fill with Vector
+    3. Quadratic Equation
+
+
+* Lecture 5 - Object Oriented Programming
+  * Text Based RPG Game
+    * Game, Map, Monster, Player, Weapon, Random and Range
 
 
 **Module 2**
