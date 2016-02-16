@@ -53,6 +53,18 @@ There are two modules:
     * Leveling Up
     * Magic Points
     * Random Encounters during Rest
+    * A Store [TBD]
+    * Items [TBD]
+    * Multiple Enemies [TBD]
+
+
+* Lecture 6 - Strings and Miscellaneous C++ Topics 
+  * Reverse String
+    * with < string > {with spaces}
+    * with < cstring > {without spaces}
+  * To-Uppercase
+  * To-Lowercase
+  * Palindrome String
 
 
 **Module 2**
