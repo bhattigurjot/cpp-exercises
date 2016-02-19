@@ -72,6 +72,7 @@ There are two modules:
     * Vector3-class
     * String-class
   * Fraction Class
+  * FloatArray Class
 
 
 
