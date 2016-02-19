@@ -58,13 +58,20 @@ There are two modules:
     * Multiple Enemies [TBD]
 
 
-* Lecture 6 - Strings and Miscellaneous C++ Topics 
+* Lecture 6 - Strings and Miscellaneous C++ Topics
   * Reverse String
     * with < string > {with spaces}
     * with < cstring > {without spaces}
   * To-Uppercase
   * To-Lowercase
   * Palindrome String
+
+
+* Lecture 7 - Operator Overloading
+  * Extra
+    * Vector3-class
+    * String-class
+
 
 
 **Module 2**
