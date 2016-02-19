@@ -71,6 +71,7 @@ There are two modules:
   * Extra
     * Vector3-class
     * String-class
+  * Fraction Class
 
 
 
