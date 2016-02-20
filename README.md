@@ -75,6 +75,14 @@ There are two modules:
   * FloatArray Class
 
 
+* Lecture 8 - File Input/Output
+  * Binary
+    * Wizard
+  * Text
+    * Basic
+    * Point
+  * Line Count
+
 
 **Module 2**
 
