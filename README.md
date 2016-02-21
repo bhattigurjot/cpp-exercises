@@ -84,6 +84,10 @@ There are two modules:
   * Line Count
 
 
+* Lecture 9 - Inheritance and Polymorphism
+  * Employee Program
+  
+
 **Module 2**
 
 *Not Done Yet*
