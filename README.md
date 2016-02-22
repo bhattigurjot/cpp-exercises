@@ -86,7 +86,14 @@ There are two modules:
 
 * Lecture 9 - Inheritance and Polymorphism
   * Employee Program
-  
+
+
+* Extra Exercises
+  * Mid Point
+  * Odd and Even
+  * Rounding
+  * Sum from 1 to n
+
 
 **Module 2**
 
