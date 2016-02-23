@@ -93,6 +93,13 @@ There are two modules:
   * Odd and Even
   * Rounding
   * Sum from 1 to n
+  * Alternating Sum
+  * Sequence Alternating 0 and 1
+  * Matrix n X n Sequence Alternating 0 and 1
+  * Diagonal Matrix
+  * Upper Triangle Matrix
+  * Upper Lower Triangle Matrix
+  * Pi^47 without pow or powf
 
 
 **Module 2**
