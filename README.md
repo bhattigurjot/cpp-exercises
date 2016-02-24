@@ -100,6 +100,8 @@ There are two modules:
   * Upper Triangle Matrix
   * Upper Lower Triangle Matrix
   * Pi^47 without pow or powf
+  * Evenly Spaced Nodal Points
+  * Function Evaluation
 
 
 **Module 2**
