@@ -102,6 +102,9 @@ There are two modules:
   * Pi^47 without pow or powf
   * Evenly Spaced Nodal Points
   * Function Evaluation
+  * Area Under the Curve [TBD]
+  * Bisection Method [TBD]
+  * Number Guessing Game
 
 
 **Module 2**
