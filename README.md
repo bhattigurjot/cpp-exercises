@@ -105,6 +105,8 @@ There are two modules:
   * Area Under the Curve [TBD]
   * Bisection Method [TBD]
   * Number Guessing Game
+  * Find Min and Max
+  * Merge Array
 
 
 **Module 2**
