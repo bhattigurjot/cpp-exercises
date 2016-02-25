@@ -107,6 +107,7 @@ There are two modules:
   * Number Guessing Game
   * Find Min and Max
   * Merge Array
+  * Inner Product of Array
 
 
 **Module 2**
