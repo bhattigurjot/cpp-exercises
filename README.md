@@ -108,6 +108,7 @@ There are two modules:
   * Find Min and Max
   * Merge Array
   * Inner Product of Array
+  * Shuffle Strings
 
 
 **Module 2**
