@@ -109,6 +109,7 @@ There are two modules:
   * Merge Array
   * Inner Product of Array
   * Shuffle Strings
+  * Character Count in String
 
 
 **Module 2**
