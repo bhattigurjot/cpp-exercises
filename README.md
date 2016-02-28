@@ -110,6 +110,7 @@ There are two modules:
   * Inner Product of Array
   * Shuffle Strings
   * Character Count in String
+  * Extract Every Other Word in String
 
 
 **Module 2**
